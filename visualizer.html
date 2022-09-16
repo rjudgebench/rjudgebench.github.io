@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScienceQA</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+    <link rel="stylesheet" href="pages/visualizer.css">
+    <script src="https://cdn.jsdelivr.net/npm/underscore@latest/underscore-umd-min.js"></script>
+    <script src="pages/index.js" defer></script>
+    <script src="pages/problems.js"></script>
+    <script src="pages/visualizer-data.js" defer></script>
+    <script src="pages/visualizer.js" defer></script>
+</head>
+<body>
+    <div id="nav">
+        <div id="icon">
+            <a class="nav-button" href="#" style="margin-left: 2px; font-size: 24px">ScienceQA</a>
+        </div>
+    </div>
+
+    <button class="optionsbtn">☰</button>
+    <div class="row">
+        <div id="option-panel" class="left">
+            <a href="javascript:void(0)" class="closebtn">×</a>
+            <h3 class="opttitle">Sample Filters</h3>
+            <div class="optbox"></div>
+            <button type="button" class="pure-button pure-button-primary" id="filter-submit">Refresh data!</button>
+        </div>
+        <div id="display">
+            <h1 id="title">ScienceQA (Science Question Answering)</h1>
+            <div id="content-body">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
