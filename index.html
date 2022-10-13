@@ -1,38 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ScienceQA</title>
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
-    <link rel="stylesheet" href="pages/visualizer.css">
-    <script src="https://cdn.jsdelivr.net/npm/underscore@latest/underscore-umd-min.js"></script>
-    <script src="pages/index.js" defer></script>
-    <script src="pages/problems.js"></script>
-    <script src="pages/visualizer-data.js" defer></script>
-    <script src="pages/visualizer.js" defer></script>
+    <link rel="icon" href="img/logo.png" type="image/icon type">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <script src="javascript/index.js" defer></script>
 </head>
+
 <body>
     <div id="nav">
         <div id="icon">
+            <img src="img/logo.png" id="nav-icon" style="max-width: 1500%;">
+            <!-- <p style="font-size: 24px;">ScienceQA</p> -->
             <a class="nav-button" href="#" style="margin-left: 2px; font-size: 24px">ScienceQA</a>
+        </div>
+        <div>
+            <a class="nav-button" href="#home">Home</a>
+            <!-- <a class="nav-button" href="#about">About</a> -->
+            <a class="nav-button" href="#dataset">Dataset</a>
+            <a class="nav-button" href="#download">Download</a>
+            <a class="nav-button" href="#paper">Paper</a>
+            <a class="nav-button" href="#code">Code</a>
+            <a class="nav-button" href="#citation">Citation</a>
+            <a class="nav-button" href="#authors">Authors</a>
+            <a class="nav-button" href="#contact">Contact</a>
+            <a class="nav-button" href="explore.html">Explore</a>
+            <a class="nav-button" href="visualize.html">Visualize</a>
         </div>
     </div>
 
-    <button class="optionsbtn">☰</button>
-    <div class="row">
-        <div id="option-panel" class="left">
-            <a href="javascript:void(0)" class="closebtn">×</a>
-            <h3 class="opttitle">Sample Filters</h3>
-            <div class="optbox"></div>
-            <button type="button" class="pure-button pure-button-primary" id="filter-submit">Refresh data!</button>
+    <!-- anchor for the home button -->
+    <div id="home" style="position: absolute; top: 0;"></div>
+
+    <!-- banner -->
+    <div id="title">
+        <div id="title-wrapper">
+            <img src="img/logo.png" id="title-icon">
+            <p id="title-text">ScienceQA</p>
         </div>
-        <div id="display">
-            <h1 id="title">ScienceQA (Science Question Answering)</h1>
-            <div id="content-body">
+        <p id="subtitle-text">
+            Learn to Explain: Multimodal Reasoning via<br>
+            Thought Chains for Science Question Answering
+            <br><br>
+            (NeurIPS 2022)
+        </p>
+        <p id="title-padding-bottom">&nbsp;</p>
+    </div>
+
+
+    <!-- the main body of the page -->
+    <!-- each section uses an empty div as an anchor -->
+    <div id="body">
+        <div class="section">
+            <div id="about" class="anchor"></div>
+            <h1>What is ScienceQA?</h1>
+            <div id="example-box">
+                <img class="example-img" src="img/scienceqa.png" alt="scienceqa.png">
+            </div>
+            <p style="line-height: 150%">
+                When answering a question, humans utilize the information available across different modalities to
+                synthesize a consistent and complete chain of thought (CoT). This process is normally a black box in the
+                case of deep learning models like large-scale language models. Recently, science question benchmarks
+                have been used to diagnose the multi-hop reasoning ability and interpretability of an AI system.
+                However, existing datasets fail to provide annotations for the answers, or are restricted to the
+                textual-only modality, small scales, and limited domain diversity.
+            </p>
+            <p style="line-height: 150%">
+                To this end, we present Science
+                Question Answering (SQA), a new benchmark that consists of ~21k multimodal multiple choice questions
+                with a diverse set of science topics and annotations of their answers with corresponding lectures and
+                explanations. We further design language models to learn to generate lectures and explanations as the
+                chain of thought (CoT) to mimic the multi-hop reasoning process when answering SQA questions. SQA
+                demonstrates the utility of CoT in language models, as CoT improves the question answering performance
+                by 1.20% in few-shot GPT-3 and 3.99% in fine-tuned UnifiedQA. We also explore the upper bound for models
+                to leverage explanations by feeding those in the input; we observe that it improves the few-shot
+                performance of GPT-3 by 18.96%. Our analysis further shows that language models, similar to humans,
+                benefit from explanations to learn from fewer data and achieve the same performance with just 40% of the
+                data.
+            </p>
+
+        </div>
+        <!-- <hr> -->
+        <div class="section">
+            <div id="dataset" class="anchor"></div>
+            <h1>ScienceQA Dataset</h1>
+            <p>There are three different sub-tasks in ScienceQA:</p>
+
+            <p>ScienceQA provides diverse visual question answering questions that require:</p>
+            <ul>
+                <li>abstract diagram recognition </li>
+                <li>comprehensive visual reasoning skills </li>
+                <li>basic common sense knowledge</li>
+            </ul>
+
+            <p>
+                Some examples in the ScienceQA dataset are shown below:
+            </p>
+            <div id="example-box">
+                <img class="example-img" src="res/more_examples.png" alt="ScienceQA_examples.png" />
+            </div>
+
+            <p>
+                For more details, you can explore the datatset and check the visualizations here:
+                <a class="ext-link" href="https://ScienceQA.github.io/explore.html">Explore</a> and
+                <a class="ext-link" href="https://ScienceQA.github.io/visualization.html">Visualizations</a>.
+            </p>
+        </div>
+
+        <!-- <hr> -->
+        <div class="section">
+            <div id="download" class="anchor"></div>
+            <h1>Download</h1>
+            <p>
+                Our dataset is distributed under the
+                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="blank" class="ext-link">CC BY-NC-SA
+                    (Attribution-NonCommercial-ShareAlike)</a> license,
+
+                which allows anyone to use our dataset for free under the following terms:
+            </p>
+            <ul>
+                <li>You must give appropriate credit, provide a link to the license, and indicate if changes were made.
+                </li>
+                <li>You must not use the material for commercial purposes.</li>
+                <li>If you remix, transform, or build upon the material, you must distribute your contributions under
+                    the same license as the original.</li>
+            </ul>
+            <p>
+                If you agree with the terms listed above, you can download our datasets below:
+            </p>
+            <ul>
+                <li>
+                    <a href="https://ScienceQA2021.s3.us-west-1.amazonaws.com/ScienceQA_data.zip"
+                        class="ext-link">ScienceQA</a>
+                    (S3) or
+                    <a href="https://drive.google.com/file/d/1Xqdt1zMcMZU5N_u1SAIjk-UAclriynGx"
+                        class="ext-link">ScienceQA</a> (Google Drive)
+                </li>
+                <li>
+                    <a href="https://ScienceQA2021.s3.us-west-1.amazonaws.com/icon645.zip" class="ext-link">Icon645</a>
+                    (S3) or
+                    <a href="https://drive.google.com/file/d/1AsqzjBjgJedgnVAOpYA9WRfMN5k6w9an"
+                        class="ext-link">Icon645</a> (Google Drive)
+                </li>
+            </ul>
+            <!-- <p>
+                Or check out our <a href="https://github.com/lupantech/ScienceQA" class="ext-link" target="blank">github repository</a>.
+            </p> -->
+            <!-- <img src="res/ccbyncsa.png" id="cc-img"> -->
+        </div>
+
+        <!-- <hr> -->
+        <div class="section">
+            <div id="paper" class="anchor"></div>
+            <h1>Paper</h1>
+            <p>
+                <papername>
+                    Learn to Explain: Multimodal Reasoning via Thought Chains for Science Question Answering
+                </papername><br>
+                Pan Lu, Swaroop Mishra, Tony Xia, Liang Qiu, Kai-Wei Chang, Song-Chun Zhu, Oyvind Tafjord, Peter Clark,
+                Ashwin Kalyan<br>
+                The 36th Conference on Neural Information Processing Systems (NeurIPS), 2022<br>
+                <a href="https://arxiv.org/abs/2110.13214" class="ext-link" target="blank">Paper</a> /
+                <a href="http://lupantech.github.io/papers/neurips22_ScienceQA.pdf" class="ext-link"
+                    target="blank">PDF</a> /
+                <a href="https://github.com/lupantech/ScienceQA" class="ext-link" target="blank">Code</a>
+            </p>
+            <p>
+                <a href="http://lupantech.github.io/papers/neurips22_ScienceQA.pdf" class="ext-link" target="blank">
+                    <img src="./img/thumbnail.png" style="width: 100%;">
+                </a>
+            </p>
+        </div>
+
+
+        <!-- <hr> -->
+        <div class="section">
+            <div id="code" class="anchor"></div>
+            <h1>Code</h1>
+            <p>
+                View on the <a href="https://github.com/lupantech/ScienceQA" class="ext-link" target="blank">github
+                    repository</a>.
+            </p>
+        </div>
+
+        <!-- <hr> -->
+        <div class="section">
+            <div id="citation" class="anchor"></div>
+            <h1>Citation</h1>
+            <p>
+                If the paper or the dataset inspires you, please cite us:
+            </p>
+            <pre class="bibtax">
+@inproceedings{lu2022learn,
+    title={Learn to Explain: Multimodal Reasoning via Thought Chains for Science Question Answering},
+    author={Lu, Pan and Mishra, Swaroop and Xia, Tony and Qiu, Liang and Chang, Kai-Wei and Zhu, Song-Chun and Tafjord, Oyvind and Clark, Peter and Ashwin Kalyan},
+    booktitle={The 36th Conference on Neural Information Processing Systems (NeurIPS 2022)},
+    year={2022}
+}</pre>
+            <br>
+        </div>
+
+        <!-- Authors -->
+        <div class="section" id="authors" style="align-content: center">
+            <h1>Authors</h1>
+            <div style="text-align: center; width: 100%; padding-top: 1em;">
+                <div class="profile">
+                    <a href="https://lupantech.github.io/">
+                        <img class="profile-img" src="./img/panlu.jpg">
+                        <p>Pan Lu<sup>1,3</sup></p>
+                    </a>
+                </div>
+                <div class="profile">
+                    <a href="https://swarooprm.github.io/">
+                        <img class="profile-img" src="./img/swaroopmishra.png">
+                        <p>Swaroop Mishra<sup>2,3</sup></p>
+                    </a>
+                </div>
+                <div class="profile">
+                    <a href="https://tonyxia2001.github.io/">
+                        <img class="profile-img" src="./img/tony.jpeg">
+                        <p>Tony Xia<sup>1</sup></p>
+                    </a>
+                </div>
+                <div class="profile">
+                    <a href="https://www.lqiu.info/">
+                        <img class="profile-img" src="./img/liangqiu.jpg">
+                        <p>Liang Qiu<sup>1</sup></p>
+                    </a>
+                </div>
+                <br>
+                <div class="profile">
+                    <a href="http://web.cs.ucla.edu/~kwchang/">
+                        <img class="profile-img" src="./img/Kai-Wei-Chang.jpg">
+                        <p>Kai-Wei Chang<sup>1</sup></p>
+                    </a>
+                </div>
+                <div class="profile" style="">
+                    <a href="http://www.stat.ucla.edu/~sczhu/">
+                        <img class="profile-img" src="./img/zhu.jpg">
+                        <p>Song-Chun Zhu<sup>1</sup></p>
+                    </a>
+                </div>
+                <div class="profile">
+                    <a href="https://allenai.org/team/oyvindt">
+                        <img class="profile-img" src="./img/Oyvind-Tafjord.jpg">
+                        <p>Oyvind Tafjord<sup>3</sup></p>
+                    </a>
+                </div>
+                <div class="profile">
+                    <a href="https://allenai.org/team/peterc">
+                        <img class="profile-img" src="./img/Peter-Clark.jpg">
+                        <p>Peter Clark<sup>3</sup></p>
+                    </a>
+                </div>
+
+                <div class="profile">
+                    <a href="http://ashwinkalyan.com/">
+                        <img class="profile-img" src="./img/ashwinkalyan.jpg">
+                        <p>Ashwin Kalyan<sup>3</sup></p>
+                    </a>
+                </div>
+            </div>
+            <div style="text-align:center; display: inline-block; width: 100%; margin-top: 0">
+                <p>
+                    <sup>1</sup>University of California, Los Angeles<br>
+                    <sup>2</sup>Arizona State University<br>
+                    <sup>3</sup>Allen Institute for AI<br>
+                </p>
             </div>
         </div>
+
+        <!-- Contact -->
+        <div class="section" id="contact">
+            <h1>Contact</h1>
+            <p>
+                Questions about ScienceQA, or want to get in touch? Contact Pan Lu at
+                <a href="https://lupantech.github.io/" target="blank" class="ext-link">the contact page</a>, or open
+                up
+                a pull request or issue on
+                <a href="https://github.com/lupantech/ScienceQA/issues" target="blank" class="ext-link">Github</a>.
+            </p>
+        </div>
+
+        <!-- Affiliation  -->
+        <div class="section" style="table-layout: auto;">
+            <center>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="https://www.ucla.edu/" target="_blank" rel="external">
+                                    <img class="center-block" src="img/vcla.png"
+                                        style="height:6em; max-width: 100%;"></a>
+                            </td>
+                            <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
+                            <td>
+                                <a href="https://www.asu.edu/" target="blank" class="ext-link">
+                                    <img class="center-block" src="img/asu.png" style="height:6em; max-width: 100%;">
+                                </a>
+                            <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
+                            <td>
+                                <a href="https://allenai.org/" target="_blank" rel="external">
+                                    <img class="center-block" src="img/ai2.png"
+                                        style="height:3em; max-width: 100%;"></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table><br>
+            </center>
+        </div>
+
+
+    </div>
+    <!-- footer -->
+    <div id="footer" style="font-size: 12pt">
+        © 2022 Center for Vision, Cognition, Learning, and Autonomy at UCLA
     </div>
 </body>
+
 </html>

@@ -16,7 +16,7 @@ let opt_dds = document.getElementsByClassName("opt-dd");
 let filter_submit = document.getElementById("filter-submit");
 
 let topic_dd = make_dropdown("Choose a topic:", topics, "topic-dd");
-let grade_dd = make_dropdown("Choose a grade:", grades , "grade-dd");
+let grade_dd = make_dropdown("Choose a grade:", grades, "grade-dd");
 let subject_dd = make_dropdown("Choose a subject:", subjects, "subject-dd");
 let img_dd = make_dropdown("Question with image context?", has_img, "img-dd");
 let hint_dd = make_dropdown("Question with text context?", has_hint, "hint-dd");
@@ -53,7 +53,7 @@ function openNav() {
         each.style.display = "block";
     }
 }
-  
+
 function closeNav() {
     optionpanel.style.width = "0";
     display.style.width = "80vw";
@@ -78,8 +78,8 @@ function create_page(d) {
     if (d.length === 0) {
         body.innerHTML = "<p>No example satisfies all the filters.</p>";
     } else {
-        col1 = create_col(d.slice(0, d.length/2));
-        col2 = create_col(d.slice(d.length/2));
+        col1 = create_col(d.slice(0, d.length / 2));
+        col2 = create_col(d.slice(d.length / 2));
         body.innerHTML = col1 + col2;
     }
     reflow(body);
@@ -107,7 +107,7 @@ function create_example(data) {
 
     let hint = make_hint(data.hint)
     let image = "";
-    if (data.image !== -1) 
+    if (data.image !== -1)
         image = make_img(data.path);
 
     let choices = make_choices(data.choices);
@@ -140,7 +140,7 @@ function make_img(path) {
     return html;
 }
 
-function make_box(contents, cls="") {
+function make_box(contents, cls = "") {
     if (contents.join("").length === 0) return "";
     let html = `
         <div class="box ${cls}"> 
@@ -159,7 +159,7 @@ function make_choices(choices) {
         len += each.length;
     }
     let html = "";
-    if (len < 60) 
+    if (len < 60)
         html = `<p><b>Choices </b></p><div class="choices">${temp}</div>`;
     else
         html = `<p><b>Choices </b></p><div class="choices-vertical">${temp}</div>`;
@@ -187,14 +187,14 @@ function make_solution(solution) {
     return html;
 }
 
-function make_dropdown(label, options, id, default_ind=0) {
+function make_dropdown(label, options, id, default_ind = 0) {
     let html = "";
     for (let i = 0; i < options.length; i++) {
-        if (i === default_ind) 
+        if (i === default_ind)
             html += `<option value="${options[i]}" selected> ${options[i]} </option>`;
         else
             html += `<option value="${options[i]}"> ${options[i]} </option>`;
-    } 
+    }
     html = `<label class="dd-label">${label} <select id="${id}" class="opt-dd"> ${html} </select> </label><br/>`;
     return html;
 }
@@ -202,7 +202,7 @@ function make_dropdown(label, options, id, default_ind=0) {
 function filter_data() {
     change_filters();
     res = problem_data;
-    if (filters.subject !== "all") 
+    if (filters.subject !== "all")
         res = res.filter(e => e.subject === filters.subject);
     if (filters.grade !== "all")
         res = res.filter(e => e.grade === filters.grade);
@@ -248,6 +248,6 @@ function filter_data() {
 }
 
 // force the browser to reflow
-function reflow(elt){
+function reflow(elt) {
     elt.offsetHeight;
 }
