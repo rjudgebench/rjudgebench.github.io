@@ -64,10 +64,8 @@ table#results.js-sort-13 tbody tr td:nth-child(14) {
     padding: 8px;
 }
 
-#results tr:nth-child(even) {
-    background-color: #f5f5f5;
-}
-
-#results tr:hover {
-    background-color: #ddd;
+.js-sort-number:hover {
+    /* color: #005587; */
+    text-decoration: underline;
+    cursor: pointer;
 }
