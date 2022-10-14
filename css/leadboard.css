@@ -65,7 +65,6 @@ table#results.js-sort-13 tbody tr td:nth-child(14) {
 }
 
 .js-sort-number:hover {
-    /* color: #005587; */
     text-decoration: underline;
     cursor: pointer;
 }
