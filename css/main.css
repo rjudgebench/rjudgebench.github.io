@@ -236,11 +236,6 @@ li {
     white-space: pre-wrap;
 }
 
-.bibtax-lines {
-    padding-left: 10em;
-    font-size: 26px;
-}
-
 .ext-link {
     /* color: var(--UCLA-blue); */
     color: #007bff;
