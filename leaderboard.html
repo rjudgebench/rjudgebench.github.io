@@ -54,7 +54,7 @@
             <!-- https://www.cssscript.com/sort-table-header-column/ -->
             <table class="js-sort-table" id="results">
                 <tr>
-                    <td class="js-sort-number"><strong>Rank</strong></td>
+                    <td class="js-sort-number"><strong>#</strong></td>
                     <td class="js-sort-number"><strong>Method</strong></td>
                     <!-- <td class="js-sort-number"><strong>Learning</strong></td> -->
                     <td class="js-sort-number"><strong>Sources</strong></td>
@@ -71,7 +71,27 @@
                 </tr>
                 <tr>
                     <td>1</td>
-                    <td style="text-align: left;">Human</td>
+                    <td style="text-align: left;">Random chance</td>
+                    <!-- <td>-</td> -->
+                    <td>
+                        <a href="https://arxiv.org/abs/2209.09513" class="ext-link" style="font-size: 16px;">
+                            Pan et al., NeurIPS 2022
+                        </a>
+                    </td>
+                    <td>Sep-2022</td>
+                    <td>40.28</td>
+                    <td>46.13</td>
+                    <td>29.25</td>
+                    <td>47.45</td>
+                    <td>40.08</td>
+                    <td>33.66</td>
+                    <td>39.35</td>
+                    <td>40.67</td>
+                    <td>39.83</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td style="text-align: left;">Human Average</td>
                     <!-- <td>-</td> -->
                     <td>
                         <a href="https://arxiv.org/abs/2209.09513" class="ext-link" style="font-size: 16px;">
@@ -90,47 +110,7 @@
                     <td>88.40</td>
                 </tr>
                 <tr>
-                    <td>2</td>
-                    <td style="text-align: left;"><strong>GPT-3 - CoT</strong> (QCM→ALE, 2-shot)</td>
-                    <!-- <td>2-shot</td> -->
-                    <td>
-                        <a href="https://arxiv.org/abs/2209.09513" class="ext-link" style="font-size: 16px;">
-                            Pan et al., NeurIPS 2022
-                        </a>
-                    </td>
-                    <td>Sep-2022</td>
-                    <td>75.44</td>
-                    <td>70.87</td>
-                    <td>78.09</td>
-                    <td>74.68</td>
-                    <td>67.43</td>
-                    <td>79.93</td>
-                    <td>78.23</td>
-                    <td>69.68</td>
-                    <td>75.17</td>
-                </tr>
-                <tr>
                     <td>3</td>
-                    <td style="text-align: left;"><strong>GPT-3 - CoT</strong> (QCM→A, 2-shot)</td>
-                    <!-- <td>2-shot</td> -->
-                    <td>
-                        <a href="https://arxiv.org/abs/2209.09513" class="ext-link" style="font-size: 16px;">
-                            Pan et al., NeurIPS 2022
-                        </a>
-                    </td>
-                    <td>Sep-2022</td>
-                    <td>76.60</td>
-                    <td>65.92</td>
-                    <td>77.55</td>
-                    <td>75.51</td>
-                    <td>66.09</td>
-                    <td>79.58</td>
-                    <td>78.49</td>
-                    <td>67.63</td>
-                    <td>74.61</td>
-                </tr>
-                <tr>
-                    <td>4</td>
                     <td style="text-align: left;"><strong>GPT-3</strong> (QCM→A, 2-shot)</td>
                     <!-- <td>2-shot</td> -->
                     <td>
@@ -150,7 +130,7 @@
                     <td>73.97</td>
                 </tr>
                 <tr>
-                    <td>5</td>
+                    <td>4</td>
                     <td style="text-align: left;"><strong>GPT-3</strong> (QCM→A, zero-shot)</td>
                     <!-- <td>zero-shot</td> -->
                     <td>
@@ -170,24 +150,84 @@
                     <td>74.04</td>
                 </tr>
                 <tr>
-                    <td>6</td>
-                    <td style="text-align: left;">Random chance</td>
-                    <!-- <td>-</td> -->
+                    <td>5</td>
+                    <td style="text-align: left;"><strong>GPT-3 - CoT</strong> (QCM→A, 2-shot)</td>
+                    <!-- <td>2-shot</td> -->
                     <td>
                         <a href="https://arxiv.org/abs/2209.09513" class="ext-link" style="font-size: 16px;">
                             Pan et al., NeurIPS 2022
                         </a>
                     </td>
                     <td>Sep-2022</td>
-                    <td>40.28</td>
-                    <td>46.13</td>
-                    <td>29.25</td>
-                    <td>47.45</td>
-                    <td>40.08</td>
-                    <td>33.66</td>
-                    <td>39.35</td>
-                    <td>40.67</td>
-                    <td>39.83</td>
+                    <td>76.60</td>
+                    <td>65.92</td>
+                    <td>77.55</td>
+                    <td>75.51</td>
+                    <td>66.09</td>
+                    <td>79.58</td>
+                    <td>78.49</td>
+                    <td>67.63</td>
+                    <td>74.61</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td style="text-align: left;"><strong>GPT-3 - CoT</strong> (QCM→ALE, 2-shot)</td>
+                    <!-- <td>2-shot</td> -->
+                    <td>
+                        <a href="https://arxiv.org/abs/2209.09513" class="ext-link" style="font-size: 16px;">
+                            Pan et al., NeurIPS 2022
+                        </a>
+                    </td>
+                    <td>Sep-2022</td>
+                    <td>75.44</td>
+                    <td>70.87</td>
+                    <td>78.09</td>
+                    <td>74.68</td>
+                    <td>67.43</td>
+                    <td>79.93</td>
+                    <td>78.23</td>
+                    <td>69.68</td>
+                    <td>75.17</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td style="text-align: left;"><strong>Multimodal-CoT</strong> (Base)</td>
+                    <!-- <td>2-shot</td> -->
+                    <td>
+                        <a href="https://arxiv.org/abs/2302.00923" class="ext-link" style="font-size: 16px;">
+                            Zhang et al., arXiv 2023
+                        </a>
+                    </td>
+                    <td>Feb-2023</td>
+                    <td>87.52</td>
+                    <td>77.17</td>
+                    <td>85.82</td>
+                    <td>87.88</td>
+                    <td>82.90</td>
+                    <td>86.83</td>
+                    <td>84.65</td>
+                    <td>85.37</td>
+                    <td>84.91</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td style="text-align: left;"><strong>Multimodal-CoT</strong> (Large)</td>
+                    <!-- <td>2-shot</td> -->
+                    <td>
+                        <a href="https://arxiv.org/abs/2302.00923" class="ext-link" style="font-size: 16px;">
+                            Zhang et al., arXiv 2023
+                        </a>
+                    </td>
+                    <td>Feb-2023</td>
+                    <td>95.91</td>
+                    <td>82.00</td>
+                    <td>90.82</td>
+                    <td>95.26</td>
+                    <td>88.80</td>
+                    <td>92.89</td>
+                    <td>92.44</td>
+                    <td>90.31</td>
+                    <td>91.68</td>
                 </tr>
             </table>
             <p>
