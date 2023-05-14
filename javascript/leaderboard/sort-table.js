@@ -120,6 +120,16 @@ sortTable.compareRow = function(RowA, RowB) {
  * @returns {string}
  */
 sortTable.stripTags = function(html) {
+    replace_unit = (s) => {
+        let iUnit = (s.indexOf('M') > -1) ? s.indexOf('M') : s.indexOf('B');
+        if (iUnit == -1) return s;
+        let unit = s[iUnit];
+        let val = Number(s.substring(0, iUnit));
+        if (isNaN(val)) return s;
+        val *= (unit == 'M') ? 1000000 : 1000000000;
+        return val.toString();
+    }
+    html = replace_unit(html);
     return html.replace(/<\/?[a-z][a-z0-9]*\b[^>]*>/gi, '');
 };
 
