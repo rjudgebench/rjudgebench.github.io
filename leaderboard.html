@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/leaderboard.css">
-    <script type="text/javascript" src="javascript/leaderboard/sort-table.js" defer></script>
-    <script type="text/javascript" src="javascript/leaderboard/leaderboard-data.js" defer></script>
-    <script type="text/javascript" src="javascript/leaderboard/leaderboard.js" defer></script>
+    <script type="text/javascript" src="javascript/sort-table.js" defer></script>
+    <script type="text/javascript" src="javascript/leaderboard-data.js" defer></script>
+    <script type="text/javascript" src="javascript/leaderboard.js" defer></script>
 </head>
 
 <body>
@@ -40,39 +40,39 @@
     </div>
     <div id="body">
         <br><br><br><br>
-        <div class="section">
+        <div class="section" style="width: 120%; margin-left: -10%">
             <h1>Leaderboard - ScienceQA</h1>
             <p>
-                Evaluation of different menthods on the <strong>test</strong> split.
-                The accuracies over different classes and on average are reported below.
+                Evaluation of different methods on the <strong>test</strong> split.
+                The accuracies across various categories and the overall average are reported below.
             </p>
             <p>
-                &#128512 You are welcome to contribute your results to the ScienceQA test split! Please fill in this
-                <a href="https://forms.gle/iwEMepqowMkknNvb8" class="ext-link">Google Form
-                </a> to submit your results.
+                &#128512 You are invited to contribute your results to the TabMWP test split! 
+                Please send your result scores to <a href="mailto:lupantech@gmail.com" class="ext-link">this email</a> or open a new issue at the <a href="https://github.com/lupantech/PromptPG/issues" class="ext-link">github repository</a>.
+                <!-- Please fill in this <a href="https://forms.gle/mRv6CBe1MDh3m47ZA" class="ext-link">Google Form </a> to submit your results. -->
             </p>
-
 
             <!-- https://www.cssscript.com/sort-table-header-column/ -->
             <table class="js-sort-table" id="results">
                 <thead>
                     <tr>
                         <td class="js-sort-number"><strong>#</strong></td>
-                        <td class="js-sort-number"><strong>Method</strong></td>
-                        <!-- <td class="js-sort-number"><strong>Learning</strong></td> -->
-                        <td class="js-sort-number"><strong>Paper</strong></td>
-                        <td class="js-sort-number"><strong>Date</strong></td>
-                        <td class="js-sort-number"><strong>Size</strong></td>
-                        <td class="js-sort-number"><strong>Param</strong></td>
-                        <td class="js-sort-number"><strong><u>Avg</u></strong></td>
-                        <td class="js-sort-number"><strong>NAT</strong></td>
-                        <td class="js-sort-number"><strong>SOC</strong></td>
-                        <td class="js-sort-number"><strong>LAN</strong></td>
-                        <td class="js-sort-number"><strong>TXT</strong></td>
-                        <td class="js-sort-number"><strong>IMG</strong></td>
-                        <td class="js-sort-number"><strong>NO</strong></td>
-                        <td class="js-sort-number"><strong>G1-6</strong></td>
-                        <td class="js-sort-number"><strong>G7-12</strong></td>
+                        <td class="js-sort"><strong>Model</strong></td>
+                        <td class="js-sort"><strong>Method</strong></td>
+                        <td class="js-sort"><strong>Learning</strong></td>
+                        <td class="js-sort"><strong>Size</strong></td>
+                        <td class="js-sort"><strong>#P</strong></td>
+                        <td class="js-sort"><strong>Link</strong></td>
+                        <td class="js-sort"><strong>Date</strong></td>
+                        <td class="js-sort"><strong>NAT</strong></td>
+                        <td class="js-sort"><strong>SOC</strong></td>
+                        <td class="js-sort"><strong>LAN</strong></td>
+                        <td class="js-sort"><strong>TXT</strong></td>
+                        <td class="js-sort"><strong>IMG</strong></td>
+                        <td class="js-sort"><strong>NO</strong></td>
+                        <td class="js-sort"><strong>G1-6</strong></td>
+                        <td class="js-sort"><strong>G7-12</strong></td>
+                        <td class="js-sort"><strong><u>Avg</u></strong></td>
                     </tr>
                 </thead>
                 <tbody>

@@ -30,7 +30,10 @@ table#results.js-sort-9 tbody tr td:nth-child(10),
 table#results.js-sort-10 tbody tr td:nth-child(11),
 table#results.js-sort-11 tbody tr td:nth-child(12),
 table#results.js-sort-12 tbody tr td:nth-child(13),
-table#results.js-sort-13 tbody tr td:nth-child(14) {
+table#results.js-sort-13 tbody tr td:nth-child(14),
+table#results.js-sort-14 tbody tr td:nth-child(15),
+table#results.js-sort-15 tbody tr td:nth-child(16),
+table#results.js-sort-16 tbody tr td:nth-child(17) {
     background: #dee;
 }
 
@@ -75,4 +78,12 @@ table#results.js-sort-13 tbody tr td:nth-child(14) {
 .js-sort-number:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+.best-model-text {
+    color: #C6011F
+}
+
+.high-model-text {
+    color: #1859c2
 }
