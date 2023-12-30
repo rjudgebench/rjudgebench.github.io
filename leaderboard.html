@@ -52,6 +52,10 @@
                 <!-- Please fill in this <a href="https://forms.gle/mRv6CBe1MDh3m47ZA" class="ext-link">Google Form </a> to submit your results. -->
             </p>
 
+            <p>
+                ⚠️⚠️⚠️ Caveat: The data in the leaderboard is collected manually from existing papers. There might be some errors in the data, ambiguous data due to different interpretations, and missing data due to the lack of information in the papers. Make sure to double-check the data before using it. Please contact us at <a href="mailto:lupantech@gmail.com" class="ext-link">this email</a> if you find any errors or have any suggestions. We appreciate your contributions and feedback.
+            </p>
+
             <!-- https://www.cssscript.com/sort-table-header-column/ -->
             <table class="js-sort-table" id="results">
                 <thead>
@@ -60,7 +64,7 @@
                         <td class="js-sort"><strong>Model</strong></td>
                         <td class="js-sort"><strong>Method</strong></td>
                         <td class="js-sort"><strong>Learning</strong></td>
-                        <td class="js-sort"><strong>Size</strong></td>
+                        <td class="js-sort"><strong>#Size</strong></td>
                         <td class="js-sort"><strong>#P</strong></td>
                         <td class="js-sort"><strong>Link</strong></td>
                         <td class="js-sort"><strong>Date</strong></td>
@@ -80,26 +84,49 @@
                 
             </table>
             <p>
-                <strong>Method names:</strong>
-                <li>Q = question</li>
-                <li>C = context</li>
-                <li>M = multiple options</li>
-                <li>A = answer</li>
-                <li>AE = answer with explanation</li>
-                <li>ALE = answer with lecture and explanation</li>
+                <strong>Model names:</strong>
+                <li><strong>Q</strong>: question</li>
+                <li><strong>C</strong>: context</li>
+                <li><strong>M</strong>: multiple options</li>
+                <li><strong>A</strong>: answer</li>
+                <li><strong>AE</strong>: answer with explanation</li>
+                <li><strong>ALE</strong>: answer with lecture and explanation</li>
                 </li>
             </p>
             <p>
+                <strong>Method types:</strong>
+                <li><strong>VQA-NN</strong>: Standard neural network for visual question answering</li>
+                <li><strong>PLM</strong>: Pre-trained language model</li>
+                <li><strong>LLM</strong>: Large language model</li>
+                <li><strong>VLM</strong>: (Large) vision-language model / Large multimodal model / Multimodal large language model</li>
+                <li><strong>Tool-LLM</strong>: Tool-augmented large language model</li>
+                </li>
+            </p>
+            <p>
+                <strong>Learning:</strong>
+                <li><strong>Zero-shot</strong>: The model is evaluated in a zero-shot setting on ScienceQA</li>
+                <li><strong>Few-shot</strong>: The model is evaluated in a few-shot setting on ScienceQA</li>
+                <li><strong>Fine-tune</strong>: The model is fine-tuned on ScienceQA</li>
+                <li><strong>-</strong>: Not available</li>
+                </li>
+            </p>
+            <p>
+                <strong>#Size: Total number of parameters in the model</strong>
+            </p>
+            <p>
+                <strong>#P: Number of trainable parameters when fine-tuned on ScienceQA</strong>
+            </p>
+            <p>
                 <strong>Accuracies for different question sets:</strong>
-                <li>NAT: questions of the natural science subject</li>
-                <li>SOC: questions of the social science subject</li>
-                <li>LAN: questions of the language science subject</li>
-                <li>TXT: questions with the text context</li>
-                <li>IMG: questions with the image context</li>
-                <li>NO: questions with no context</li>
-                <li>G1-6: questions in the grade group of 1-6</li>
-                <li>G7-12: questions in the grade group of 7-12</li>
-                <li>Avg: all questions (reporting the average accuracy)</li>
+                <li><strong>NAT</strong>: questions of the natural science subject</li>
+                <li><strong>SOC</strong>: questions of the social science subject</li>
+                <li><strong>LAN</strong>: questions of the language science subject</li>
+                <li><strong>TXT</strong>: questions with the text context</li>
+                <li><strong>IMG</strong>: questions with the image context</li>
+                <li><strong>NO</strong>: questions with no context</li>
+                <li><strong>G1-6</strong>: questions in the grade group of 1-6</li>
+                <li><strong>G7-12</strong>: questions in the grade group of 7-12</li>
+                <li><strong>Avg</strong>: all questions (reporting the average accuracy)</li>
                 </li>
             </p>
         </div>
