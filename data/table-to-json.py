@@ -68,14 +68,16 @@ assert random_line["Model"] == "Random Chance"
 
 avg_lines = [ln for ln in lines if ln["Avg"] != '-']
 img_lines = [ln for ln in lines if ln["Avg"] == '-' and ln["IMG"] != '-']
-rest_lines = [ln for ln in lines if ln["Avg"] == '-' and ln["IMG"] == '-']
+txt_lines = [ln for ln in lines if ln["Avg"] == '-' and ln["IMG"] == '-' and ln["TXT"] != '-']
+rest_lines = [ln for ln in lines if ln["Avg"] == '-' and ln["IMG"] == '-' and ln["TXT"] == '-']
 
 print("AVG lines:", len(avg_lines))
 print("IMG lines:", len(img_lines))
+print("Text lines:", len(txt_lines))
 print("ALL lines:", len(lines)+2)
 
 assert len(rest_lines) == 0
-# print("rest_lines", len(rest_lines))
+print("rest_lines", len(rest_lines))
 # print("rest_lines", rest_lines)
 
 # rank models
@@ -87,6 +89,7 @@ else if attribute "IMG" is a float, then rank by "IMG":
 """
 avg_lines = sorted(avg_lines, key=lambda x: float(x["Avg"]), reverse=True)
 img_lines = sorted(img_lines, key=lambda x: float(x["IMG"]), reverse=True)
+txt_lines = sorted(txt_lines, key=lambda x: float(x["TXT"]), reverse=True)
 
 avg_lines[0]["Model"] += " 🥇"
 avg_lines[1]["Model"] += " 🥈"
@@ -101,7 +104,7 @@ for i, ln in enumerate(avg_lines):
 for i, ln in enumerate(img_lines):
     ln["#"] = "-" # rank by img
 
-sorted_lines = [human_line] + [random_line] + avg_lines + img_lines
+sorted_lines = [human_line] + [random_line] + avg_lines + img_lines + txt_lines
 
 with open("../javascript/leaderboard-data.js", "w") as f:
     f.write("leaderboard = ")
