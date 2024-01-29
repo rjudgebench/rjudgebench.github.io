@@ -108,3 +108,4 @@
 | | **Lynx** | VLM | Zero-shot | - | - | [Link](https://arxiv.org/abs/2310.09036) | 23-10-13 | - | - | - | - | - | - | - | - | **38.28** |
 | | **BLIP-2** | VLM | Zero-shot | - | - | [Link](https://arxiv.org/abs/2310.09036) | 23-10-13 | - | - | - | - | - | - | - | - | **74.17** |
 | | **InstructBLIP** | VLM | Zero-shot | - | - | [Link](https://arxiv.org/abs/2310.09036) | 23-10-13 | - | - | - | - | - | - | - | - | **73.33** |
+| | KAM-CoT | VLM | Fine-tune | 280M | 280M | [Link](https://arxiv.org/abs/2401.12863) | 24-01-23 | 94.76 | 92.24 | 93.36 | 94.53 | 93.16 | 94.15 | 94.24 | 93.21 | **93.87** |

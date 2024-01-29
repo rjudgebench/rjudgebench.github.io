@@ -115,6 +115,25 @@ leaderboard = [
     },
     {
         "#": "5",
+        "Model": "KAM-CoT",
+        "Method": "VLM",
+        "Learning": "Fine-tune",
+        "Size": "280M",
+        "Param": "280M",
+        "Link": "https://arxiv.org/abs/2401.12863",
+        "Date": "24-01-23",
+        "NAT": "94.76",
+        "SOC": "92.24",
+        "LAN": "93.36",
+        "TXT": "94.53",
+        "IMG": "93.16",
+        "NO": "94.15",
+        "G1-6": "94.24",
+        "G7-12": "93.21",
+        "Avg": "93.87"
+    },
+    {
+        "#": "6",
         "Model": "MC-CoT_Large",
         "Method": "VLM",
         "Learning": "Fine-tune",
@@ -133,7 +152,7 @@ leaderboard = [
         "Avg": "93.37"
     },
     {
-        "#": "6",
+        "#": "7",
         "Model": "DPMM-CoT_Large",
         "Method": "VLM",
         "Learning": "Fine-tune",
@@ -152,7 +171,7 @@ leaderboard = [
         "Avg": "93.35"
     },
     {
-        "#": "7",
+        "#": "8",
         "Model": "LLaVA (GPT-4 judge)",
         "Method": "VLM",
         "Learning": "Fine-tune",
@@ -171,7 +190,7 @@ leaderboard = [
         "Avg": "92.53"
     },
     {
-        "#": "8",
+        "#": "9",
         "Model": "CoMD (Vicuna-7B)",
         "Method": "VLM",
         "Learning": "Fine-tune",
@@ -190,7 +209,7 @@ leaderboard = [
         "Avg": "91.94"
     },
     {
-        "#": "9",
+        "#": "10",
         "Model": "Mutimodal-T-SciQ_Base",
         "Method": "LLM",
         "Learning": "Fine-tune",
@@ -209,7 +228,7 @@ leaderboard = [
         "Avg": "91.75"
     },
     {
-        "#": "10",
+        "#": "11",
         "Model": "Multimodal-CoT_Large",
         "Method": "VLM",
         "Learning": "Fine-tune",
@@ -228,7 +247,7 @@ leaderboard = [
         "Avg": "91.68"
     },
     {
-        "#": "11",
+        "#": "12",
         "Model": "PILL (LLaMA-7B)",
         "Method": "VLM",
         "Learning": "Fine-tune",
@@ -247,7 +266,7 @@ leaderboard = [
         "Avg": "91.23"
     },
     {
-        "#": "12",
+        "#": "13",
         "Model": "LLaVA (ViT-L/16-224)",
         "Method": "VLM",
         "Learning": "Fine-tune",
@@ -266,7 +285,7 @@ leaderboard = [
         "Avg": "91.2"
     },
     {
-        "#": "13",
+        "#": "14",
         "Model": "DPMM-CoT_Base",
         "Method": "VLM",
         "Learning": "Fine-tune",
@@ -285,7 +304,7 @@ leaderboard = [
         "Avg": "90.97"
     },
     {
-        "#": "14",
+        "#": "15",
         "Model": "LLaVA",
         "Method": "VLM",
         "Learning": "Fine-tune",
@@ -304,7 +323,7 @@ leaderboard = [
         "Avg": "90.92"
     },
     {
-        "#": "15",
+        "#": "16",
         "Model": "LaVIN-13B",
         "Method": "VLM",
         "Learning": "Fine-tune",
@@ -323,7 +342,7 @@ leaderboard = [
         "Avg": "90.83"
     },
     {
-        "#": "16",
+        "#": "17",
         "Model": "MC-CoT_F-Base",
         "Method": "VLM",
         "Learning": "Fine-tune",
@@ -342,7 +361,7 @@ leaderboard = [
         "Avg": "90.73"
     },
     {
-        "#": "17",
+        "#": "18",
         "Model": "MC-CoT_Base",
         "Method": "VLM",
         "Learning": "Fine-tune",
@@ -361,7 +380,7 @@ leaderboard = [
         "Avg": "90.64"
     },
     {
-        "#": "18",
+        "#": "19",
         "Model": "LLaMA-SciTune",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -380,7 +399,7 @@ leaderboard = [
         "Avg": "90.03"
     },
     {
-        "#": "19",
+        "#": "20",
         "Model": "LaVIN-7B",
         "Method": "VLM",
         "Learning": "Fine-tune",
@@ -399,7 +418,7 @@ leaderboard = [
         "Avg": "89.41"
     },
     {
-        "#": "20",
+        "#": "21",
         "Model": "Flan-T5-XL (LoRA)",
         "Method": "LLM",
         "Learning": "Fine-tune",
@@ -418,7 +437,7 @@ leaderboard = [
         "Avg": "89.29"
     },
     {
-        "#": "21",
+        "#": "22",
         "Model": "Chat-UniVi",
         "Method": "VLM",
         "Learning": "Fine-tune",
@@ -437,7 +456,7 @@ leaderboard = [
         "Avg": "88.78"
     },
     {
-        "#": "22",
+        "#": "23",
         "Model": "DDCoT (T5)",
         "Method": "PLM",
         "Learning": "Fine-tune",
@@ -456,7 +475,7 @@ leaderboard = [
         "Avg": "87.34"
     },
     {
-        "#": "23",
+        "#": "24",
         "Model": "LG-VQA (CLIP)",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -475,7 +494,7 @@ leaderboard = [
         "Avg": "87.22"
     },
     {
-        "#": "24",
+        "#": "25",
         "Model": "Chameleon (GPT-4)",
         "Method": "Tool-LLM",
         "Learning": "Few-shot",
@@ -494,7 +513,7 @@ leaderboard = [
         "Avg": "86.54"
     },
     {
-        "#": "25",
+        "#": "26",
         "Model": "LG-VQA (BLIP-2)",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -513,7 +532,7 @@ leaderboard = [
         "Avg": "86.32"
     },
     {
-        "#": "26",
+        "#": "27",
         "Model": "LLaMA-SciTune",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -532,7 +551,7 @@ leaderboard = [
         "Avg": "86.11"
     },
     {
-        "#": "27",
+        "#": "28",
         "Model": "Enigma-COT_Base",
         "Method": "LLM",
         "Learning": "Fine-tune",
@@ -551,7 +570,7 @@ leaderboard = [
         "Avg": "85.59"
     },
     {
-        "#": "28",
+        "#": "29",
         "Model": "LLaMA-Adapter",
         "Method": "VLM",
         "Learning": "Fine-tune",
@@ -570,7 +589,7 @@ leaderboard = [
         "Avg": "85.19"
     },
     {
-        "#": "29",
+        "#": "30",
         "Model": "Multimodal-CoT_Base",
         "Method": "VLM",
         "Learning": "Fine-tune",
@@ -589,7 +608,7 @@ leaderboard = [
         "Avg": "84.91"
     },
     {
-        "#": "30",
+        "#": "31",
         "Model": "IMMO SL+RL",
         "Method": "VLM",
         "Learning": "Fine-tune",
@@ -608,7 +627,7 @@ leaderboard = [
         "Avg": "84.8"
     },
     {
-        "#": "31",
+        "#": "32",
         "Model": "CoT GPT-4",
         "Method": "LLM",
         "Learning": "Few-shot",
@@ -627,7 +646,7 @@ leaderboard = [
         "Avg": "83.99"
     },
     {
-        "#": "32",
+        "#": "33",
         "Model": "HoT-T5_Large",
         "Method": "LLM",
         "Learning": "Fine-tune",
@@ -646,7 +665,7 @@ leaderboard = [
         "Avg": "83.38"
     },
     {
-        "#": "33",
+        "#": "34",
         "Model": "HoT-T5_Base",
         "Method": "LLM",
         "Learning": "Fine-tune",
@@ -665,7 +684,7 @@ leaderboard = [
         "Avg": "81.42"
     },
     {
-        "#": "34",
+        "#": "35",
         "Model": "DDCoT (ChatGPT)",
         "Method": "LLM",
         "Learning": "Zero-shot",
@@ -684,7 +703,7 @@ leaderboard = [
         "Avg": "80.15"
     },
     {
-        "#": "35",
+        "#": "36",
         "Model": "Chameleon (ChatGPT)",
         "Method": "Tool-LLM",
         "Learning": "Few-shot",
@@ -703,7 +722,7 @@ leaderboard = [
         "Avg": "79.93"
     },
     {
-        "#": "36",
+        "#": "37",
         "Model": "CoT GPT-3 + Doc",
         "Method": "Tool-LLM",
         "Learning": "Zero-shot",
@@ -722,7 +741,7 @@ leaderboard = [
         "Avg": "79.91"
     },
     {
-        "#": "37",
+        "#": "38",
         "Model": "UnifiedQA-T-SciQ_Base",
         "Method": "LLM",
         "Learning": "Fine-tune",
@@ -741,7 +760,7 @@ leaderboard = [
         "Avg": "79.41"
     },
     {
-        "#": "38",
+        "#": "39",
         "Model": "CoT ChatGPT",
         "Method": "LLM",
         "Learning": "Few-shot",
@@ -760,7 +779,7 @@ leaderboard = [
         "Avg": "78.31"
     },
     {
-        "#": "39",
+        "#": "40",
         "Model": "DDCoT (GPT-3)",
         "Method": "LLM",
         "Learning": "Zero-shot",
@@ -779,7 +798,7 @@ leaderboard = [
         "Avg": "78.09"
     },
     {
-        "#": "40",
+        "#": "41",
         "Model": "LaVIN-13B",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -798,7 +817,7 @@ leaderboard = [
         "Avg": "77.54"
     },
     {
-        "#": "41",
+        "#": "42",
         "Model": "CoT GPT-3 (ALE)",
         "Method": "LLM",
         "Learning": "Few-shot",
@@ -817,7 +836,7 @@ leaderboard = [
         "Avg": "75.17"
     },
     {
-        "#": "42",
+        "#": "43",
         "Model": "LaVIN-7B",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -836,7 +855,7 @@ leaderboard = [
         "Avg": "75.11"
     },
     {
-        "#": "43",
+        "#": "44",
         "Model": "CoT GPT-3 (AE)",
         "Method": "LLM",
         "Learning": "Few-shot",
@@ -855,7 +874,7 @@ leaderboard = [
         "Avg": "74.61"
     },
     {
-        "#": "44",
+        "#": "45",
         "Model": "BLIP-2",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -874,7 +893,7 @@ leaderboard = [
         "Avg": "74.17"
     },
     {
-        "#": "45",
+        "#": "46",
         "Model": "CoT UnifiedQA",
         "Method": "PLM",
         "Learning": "Fine-tune",
@@ -893,7 +912,7 @@ leaderboard = [
         "Avg": "74.11"
     },
     {
-        "#": "46",
+        "#": "47",
         "Model": "GPT-3 (0-shot)",
         "Method": "LLM",
         "Learning": "Zero-shot",
@@ -912,7 +931,7 @@ leaderboard = [
         "Avg": "74.04"
     },
     {
-        "#": "47",
+        "#": "48",
         "Model": "GPT-3 (2-shot)",
         "Method": "LLM",
         "Learning": "Few-shot",
@@ -931,7 +950,7 @@ leaderboard = [
         "Avg": "73.97"
     },
     {
-        "#": "48",
+        "#": "49",
         "Model": "InstructBLIP",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -950,7 +969,7 @@ leaderboard = [
         "Avg": "73.33"
     },
     {
-        "#": "49",
+        "#": "50",
         "Model": "UnifiedQA",
         "Method": "PLM",
         "Learning": "Fine-tune",
@@ -969,7 +988,7 @@ leaderboard = [
         "Avg": "70.12"
     },
     {
-        "#": "50",
+        "#": "51",
         "Model": "ChatGPT",
         "Method": "LLM",
         "Learning": "Zero-shot",
@@ -988,7 +1007,7 @@ leaderboard = [
         "Avg": "69.41"
     },
     {
-        "#": "51",
+        "#": "52",
         "Model": "MetaCLIP",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -1007,7 +1026,7 @@ leaderboard = [
         "Avg": "68.77"
     },
     {
-        "#": "52",
+        "#": "53",
         "Model": "OpenCLIP",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -1026,7 +1045,7 @@ leaderboard = [
         "Avg": "67.53"
     },
     {
-        "#": "53",
+        "#": "54",
         "Model": "Flan-T5-XXL",
         "Method": "LLM",
         "Learning": "Zero-shot",
@@ -1045,7 +1064,7 @@ leaderboard = [
         "Avg": "67.43"
     },
     {
-        "#": "54",
+        "#": "55",
         "Model": "SAM",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -1064,7 +1083,7 @@ leaderboard = [
         "Avg": "67.08"
     },
     {
-        "#": "55",
+        "#": "56",
         "Model": "DINOv2",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -1083,7 +1102,7 @@ leaderboard = [
         "Avg": "64.60"
     },
     {
-        "#": "56",
+        "#": "57",
         "Model": "VisualBERT",
         "Method": "VLM",
         "Learning": "Fine-tune",
@@ -1102,7 +1121,7 @@ leaderboard = [
         "Avg": "61.87"
     },
     {
-        "#": "57",
+        "#": "58",
         "Model": "Patch-TRM",
         "Method": "VLM",
         "Learning": "Fine-tune",
@@ -1121,7 +1140,7 @@ leaderboard = [
         "Avg": "61.42"
     },
     {
-        "#": "58",
+        "#": "59",
         "Model": "ViLT",
         "Method": "VLM",
         "Learning": "Fine-tune",
@@ -1140,7 +1159,7 @@ leaderboard = [
         "Avg": "61.14"
     },
     {
-        "#": "59",
+        "#": "60",
         "Model": "DFAF",
         "Method": "VQA-NN",
         "Learning": "Fine-tune",
@@ -1159,7 +1178,7 @@ leaderboard = [
         "Avg": "60.72"
     },
     {
-        "#": "60",
+        "#": "61",
         "Model": "Chat-UniVi",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -1178,7 +1197,7 @@ leaderboard = [
         "Avg": "59.96"
     },
     {
-        "#": "61",
+        "#": "62",
         "Model": "BAN",
         "Method": "VQA-NN",
         "Learning": "Fine-tune",
@@ -1197,7 +1216,7 @@ leaderboard = [
         "Avg": "59.37"
     },
     {
-        "#": "62",
+        "#": "63",
         "Model": "Top-Down",
         "Method": "VQA-NN",
         "Learning": "Fine-tune",
@@ -1216,7 +1235,7 @@ leaderboard = [
         "Avg": "59.02"
     },
     {
-        "#": "63",
+        "#": "64",
         "Model": "MiniGPT4",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -1235,7 +1254,7 @@ leaderboard = [
         "Avg": "58.70"
     },
     {
-        "#": "64",
+        "#": "65",
         "Model": "LLaMA2-13B",
         "Method": "LLM",
         "Learning": "Zero-shot",
@@ -1254,7 +1273,7 @@ leaderboard = [
         "Avg": "55.78"
     },
     {
-        "#": "65",
+        "#": "66",
         "Model": "DDCoT (MiniGPT-4)",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -1273,7 +1292,7 @@ leaderboard = [
         "Avg": "55.67"
     },
     {
-        "#": "66",
+        "#": "67",
         "Model": "QVix",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -1292,7 +1311,7 @@ leaderboard = [
         "Avg": "55.0"
     },
     {
-        "#": "67",
+        "#": "68",
         "Model": "MCAN",
         "Method": "VQA-NN",
         "Learning": "Fine-tune",
@@ -1311,7 +1330,7 @@ leaderboard = [
         "Avg": "54.54"
     },
     {
-        "#": "68",
+        "#": "69",
         "Model": "LLaMA-Adapter-V2",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -1330,7 +1349,7 @@ leaderboard = [
         "Avg": "54.44"
     },
     {
-        "#": "69",
+        "#": "70",
         "Model": "VLIS",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -1349,7 +1368,7 @@ leaderboard = [
         "Avg": "50.2"
     },
     {
-        "#": "70",
+        "#": "71",
         "Model": "LLaVA-13B",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -1368,7 +1387,7 @@ leaderboard = [
         "Avg": "47.74"
     },
     {
-        "#": "71",
+        "#": "72",
         "Model": "VPGTrans",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -1387,7 +1406,7 @@ leaderboard = [
         "Avg": "47.00"
     },
     {
-        "#": "72",
+        "#": "73",
         "Model": "MiniGPT-4",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -1406,7 +1425,7 @@ leaderboard = [
         "Avg": "44.71"
     },
     {
-        "#": "73",
+        "#": "74",
         "Model": "LLaMA1-13B",
         "Method": "LLM",
         "Learning": "Zero-shot",
@@ -1425,7 +1444,7 @@ leaderboard = [
         "Avg": "43.33"
     },
     {
-        "#": "74",
+        "#": "75",
         "Model": "LLaMA2-7B",
         "Method": "LLM",
         "Learning": "Zero-shot",
@@ -1444,7 +1463,7 @@ leaderboard = [
         "Avg": "43.08"
     },
     {
-        "#": "75",
+        "#": "76",
         "Model": "LLaVA-7B",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -1463,7 +1482,7 @@ leaderboard = [
         "Avg": "41.10"
     },
     {
-        "#": "76",
+        "#": "77",
         "Model": "OpenFlamingo",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -1482,7 +1501,7 @@ leaderboard = [
         "Avg": "39.27"
     },
     {
-        "#": "77",
+        "#": "78",
         "Model": "Lynx",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -1501,7 +1520,7 @@ leaderboard = [
         "Avg": "38.28"
     },
     {
-        "#": "78",
+        "#": "79",
         "Model": "mPLUG-Owl",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -1520,7 +1539,7 @@ leaderboard = [
         "Avg": "37.93"
     },
     {
-        "#": "79",
+        "#": "80",
         "Model": "MultiGPT",
         "Method": "VLM",
         "Learning": "Zero-shot",
@@ -1539,7 +1558,7 @@ leaderboard = [
         "Avg": "36.29"
     },
     {
-        "#": "80",
+        "#": "81",
         "Model": "LLaMA1-7B",
         "Method": "LLM",
         "Learning": "Zero-shot",
@@ -1558,7 +1577,7 @@ leaderboard = [
         "Avg": "36.19"
     },
     {
-        "#": "81",
+        "#": "82",
         "Model": "Fromage",
         "Method": "VLM",
         "Learning": "Zero-shot",
