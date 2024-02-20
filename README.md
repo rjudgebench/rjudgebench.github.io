@@ -1,1 +1,1 @@
-# scienceqa.github.io
+# rjudgebench.github.io
