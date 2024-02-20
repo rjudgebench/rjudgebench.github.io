@@ -43,13 +43,12 @@
     <div id="title">
         <div id="title-wrapper">
             <img src="img/logo.png" id="title-icon">
-            <p id="title-text">ScienceQA</p>
+            <p id="title-text">R-Judge</p>
         </div>
         <p id="subtitle-text">
-            Learn to Explain: Multimodal Reasoning via<br>
-            Thought Chains for Science Question Answering
+            R-Judge: <br>
+            Benchmarking Safety Risk Awareness for LLM Agents
             <br><br>
-            (NeurIPS 2022)
         </p>
         <p id="title-padding-bottom">&nbsp;</p>
     </div>
@@ -59,28 +58,30 @@
     <div id="body">
         <div class="section">
             <div id="about" class="anchor"></div>
-            <h1>About ScienceQA</h1>
+            <h1>About R-Judge</h1>
             <div id="example-box">
-                <img class="example-img" src="img/scienceqa.png" alt="scienceqa.png">
+                <figure>
+                    <img class="example-img" src="assets/illustration.png" alt="rjudge.png">
+                    <figcaption>Illustration of R-Judge by an example</figcaption>
+                </figure>
             </div>
             <p style="line-height: 150%">
-                When answering a question, humans utilize the information available across different modalities to
-                synthesize a consistent and complete chain of thought (CoT). This process is normally a
-                black box in the
-                case of deep learning models like large-scale language models. Recently, science question benchmarks
-                have been used to diagnose the multi-hop reasoning ability and interpretability of an AI system.
-                However, existing datasets fail to provide annotations for the answers, or are restricted to the
-                textual-only modality, small scales, and limited domain diversity.
-                To this end, we present <strong>Science Question Answering (ScienceQA)</strong>, a new benchmark
-                that consists of ~21k multimodal multiple choice questions with a diverse set of
-                <i>science</i> topics and
-                annotations of their answers with corresponding <i>lectures</i> and <i>explanations</i>. We further
-                design language
-                models to learn to generate lectures and explanations as <strong>the chain of thought (CoT)</strong> to
-                mimic the
-                multi-hop reasoning process when answering ScienceQA questions. ScienceQA demonstrates the utility of
-                CoT in language models, as CoT improves the question answering performance by 1.20% in few-shot GPT-3
-                and 3.99% in fine-tuned UnifiedQA.
+                Large language models (LLMs) have exhibited great potential in autonomously completing tasks across 
+                real-world applications. Despite this, these LLM agents introduce unexpected safety risks when 
+                operating in interactive environments. Instead of centering on LLM-generated content safety 
+                in most prior studies, this work addresses the imperative need for benchmarking the behavioral 
+                safety of LLM agents within diverse environments. We introduce R-Judge, a benchmark crafted to 
+                evaluate the proficiency of LLMs in judging and identifying safety risks given agent interaction 
+                records. <br>
+                The figure illustrates R-Judge: The upper left part is an example in the dataset, 
+                i.e., a record of an agent interacting with the user and environment. 
+                The lower left part is human annotation involving a binary safety label and 
+                high-quality risk description. Following the arrow, we can see the serial evaluation paradigm 
+                with two tests: given record and task instruction, 
+                LLMs are asked to generate an analysis and a label. 
+                An automatic evaluator compares the analysis with the ground truth risk description 
+                to assess the effectiveness of risk identification. 
+                And correct generated labels are counted to evaluate the performance of safety judgment.
             </p>
 
         </div>
@@ -88,36 +89,14 @@
         <!-- <hr> -->
         <div class="section">
             <div id="dataset" class="anchor"></div>
-            <h1>ScienceQA Dataset</h1>
+            <h1>R-Judge Dataset</h1>
             <p>
-                ScienceQA is collected from elementary and high school science curricula, and contains 21,208 multimodal
-                multiple-choice science questions.
-
-                Out of the questions in ScienceQA, 10,332 (48.7%) have an image context, 10,220 (48.2%)
-                have a text context, and 6,532 (30.8%) have both.
-                Most questions are annotated with grounded lectures (83.9%) and detailed explanations
-                (90.5%).
-                The lecture and explanation provide
-                general external knowledge and specific reasons, respectively, for arriving at the correct answer.
-
-                To the best of our knowledge, ScienceQA
-                is the first large-scale multimodal dataset that annotates lectures and explanations for the answers.
-            </p>
-            <p>
-                ScienceQA, in contrast to previous datasets,
-                has richer domain diversity from three subjects: <strong>natural science</strong>,
-                <strong>language science</strong>, and
-                <strong>social science</strong>.
-
-                Questions in each subject are categorized first by the topic
-                (<i>Biology</i>, <i>Physics</i>, <i>Chemistry</i>, etc.), then by the category (<i>Plants</i>,
-                <i>Cells</i>, <i>Animals</i>,
-                etc.), and finally by the skill (<i>Classify fruits and vegetables as plant parts</i>, <i>Identify
-                    countries of Africa</i>, etc.).
-                ScienceQA features 26 topics, 127 categories, and 379 skills that cover a wide range of domains.
+                R-Judge comprises 162 records of multi-turn agent interaction, 
+                encompassing 27 key risk scenarios among 7 application categories and 10 risk types. 
+                It incorporates human consensus on safety with annotated safety labels and high-quality risk descriptions. 
             </p>
             <div id="example-box">
-                <img class="example-img" src="img/domains.png" style="width: 98%" alt="domains.png" />
+                <img class="example-img" src="assets/datasetintro.png" style="width: 98%" alt="domains.png" />
             </div>
             <p>
                 For more details, you can explore the datatset and check the visualizations here:
@@ -217,16 +196,18 @@
                 If the paper, codes, or the dataset inspire you, please cite us:
             </p>
             <pre class="bibtax">
-@inproceedings{lu2022learn,
-    title={Learn to Explain: Multimodal Reasoning via Thought Chains for Science Question Answering},
-    author={Lu, Pan and Mishra, Swaroop and Xia, Tony and Qiu, Liang and Chang, Kai-Wei and Zhu, Song-Chun and Tafjord, Oyvind and Clark, Peter and Ashwin Kalyan},
-    booktitle={The 36th Conference on Neural Information Processing Systems (NeurIPS)},
-    year={2022}
+@article{yuan2024rjudge,
+  title={R-Judge: Benchmarking Safety Risk Awareness for LLM Agents},
+  author={Tongxin Yuan and Zhiwei He and Lingzhong Dong and Yiming Wang and Ruijie Zhao and Tian Xia and Lizhen Xu and Binglin Zhou and Fangqi Li and Zhuosheng Zhang and Rui Wang and Gongshen Liu},
+  journal={arXiv preprint arXiv:2401.10019},
+  year={2024}
+}
 }</pre>
             <br>
         </div>
 
         <!-- Authors -->
+        <!--  
         <div class="section" id="authors" style="align-content: center">
             <h1>Authors</h1>
             <div style="text-align: center; width: 100%; padding-top: 1em;">
@@ -295,15 +276,16 @@
                 </p>
             </div>
         </div>
+        -->
 
         <!-- Contact -->
         <div class="section" id="contact">
             <h1>Contact</h1>
             <p>
-                Questions about ScienceQA, or want to get in touch? Contact Pan Lu at
-                <a href="https://lupantech.github.io/" target="blank" class="ext-link">the contact page</a>, or open
+                Questions about R-Judge, or want to get in touch? Contact Tongxin Yuan at
+                <a href="teenyuan@sjtu.edu.cn" target="blank" class="ext-link">Email</a>, or open
                 up an issue on
-                <a href="https://github.com/lupantech/ScienceQA/issues" target="blank" class="ext-link">Github</a>.
+                <a href="https://github.com/Lordog/R-Judge/issues" target="blank" class="ext-link">Github</a>.
             </p>
         </div>
 
@@ -314,20 +296,9 @@
                     <tbody>
                         <tr>
                             <td>
-                                <a href="https://www.ucla.edu/" target="_blank" rel="external">
-                                    <img class="center-block" src="img/vcla.png"
+                                <a href="https://www.sjtu.edu.cn//" target="_blank" rel="external">
+                                    <img class="center-block" src="assets/sjtu.png"
                                         style="height:6em; max-width: 100%;"></a>
-                            </td>
-                            <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-                            <td>
-                                <a href="https://www.asu.edu/" target="blank" class="ext-link">
-                                    <img class="center-block" src="img/asu.png" style="height:6em; max-width: 100%;">
-                                </a>
-                            <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-                            <td>
-                                <a href="https://allenai.org/" target="_blank" rel="external">
-                                    <img class="center-block" src="img/ai2.png"
-                                        style="height:3em; max-width: 100%;"></a>
                             </td>
                         </tr>
                     </tbody>
@@ -339,7 +310,7 @@
     </div>
     <!-- footer -->
     <div id="footer" style="font-size: 12pt">
-        © 2022 Center for Vision, Cognition, Learning, and Autonomy at UCLA
+        © 2024 SJTU. Website developed based on the ScienceQA template.
     </div>
 </body>
 
