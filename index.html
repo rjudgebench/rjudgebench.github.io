@@ -46,9 +46,10 @@
             <p id="title-text">R-Judge</p>
         </div>
         <p id="subtitle-text">
-            R-Judge: <br>
-            Benchmarking Safety Risk Awareness for LLM Agents
+            Benchmarking Safety Risk Awareness 
+            <br>for LLM Agents
             <br><br>
+            (2024)
         </p>
         <p id="title-padding-bottom">&nbsp;</p>
     </div>
@@ -62,7 +63,7 @@
             <div id="example-box">
                 <figure>
                     <img class="example-img" src="assets/illustration.png" alt="rjudge.png">
-                    <figcaption>Illustration of R-Judge by an example</figcaption>
+                    <figcaption style="text-align: center;">This is an illustration.</figcaption>
                 </figure>
             </div>
             <p style="line-height: 150%">
@@ -73,6 +74,8 @@
                 safety of LLM agents within diverse environments. We introduce R-Judge, a benchmark crafted to 
                 evaluate the proficiency of LLMs in judging and identifying safety risks given agent interaction 
                 records. <br>
+            </p>
+            <p>
                 The figure illustrates R-Judge: The upper left part is an example in the dataset, 
                 i.e., a record of an agent interacting with the user and environment. 
                 The lower left part is human annotation involving a binary safety label and 
@@ -96,7 +99,7 @@
                 It incorporates human consensus on safety with annotated safety labels and high-quality risk descriptions. 
             </p>
             <div id="example-box">
-                <img class="example-img" src="assets/datasetintro.png" style="width: 98%" alt="domains.png" />
+                <img class="example-img" src="assets/datasetintro.png" style="width: 80%" alt="datasetintro.png" />
             </div>
             <p>
                 For more details, you can explore the datatset and check the visualizations here:
@@ -128,10 +131,29 @@
         <!-- <hr> -->
         <div class="section">
             <div id="method" class="anchor"></div>
-            <h1>Method</h1>
+            <h1>Evaluation Recipes</h1>
             <p>
-                We build a few-shot GPT-3 model via chain-of-thought (CoT) prompting to generate the answer followed
-                by the lecture and the explanations.
+                As shown in the first Figure, the two evaluation recipes are conducted in a serial pipeline. 
+                First, LLMs are demonstrated with the record as input and asked to analyze whether 
+                the agent actions in the record are safe, formalized as 
+                $p_{\theta}(R) \to \textrm{analysis} \label{eq1}$. 
+                Then, LLMs are asked to output 'unsafe' or 'safe' based on record and analysis in the first step, 
+                formalized as $p_{\theta} (R, \textrm{analysis}) \to \textrm{label}\label{eq2}$.
+                The output analysis in the first step and the output label 
+                in the second step are taken respectively for the two evaluation recipes, 
+                with human annotation as ground truth.
+            </p>
+            <p>
+                1. Label Score for Safety Judgment. 
+                To evaluate the ability of LLMs to make safety judgments, 
+                a label-based test compares LLM-generated binary safety labels with truth labels 
+                from the consensus of human annotators. 
+            </p>
+            <p>
+            2. Pairwise Evaluation for Risk Identification.
+             To evaluate the effectiveness of LLMs in identifying safety risks, 
+             an open-ended test utilizes GPT-4 as an automatic evaluator to assess 
+             the open-ended model-generated analysis on unsafe cases. 
             </p>
 
             <div id="example-box">
@@ -183,7 +205,7 @@
             <div id="code" class="anchor"></div>
             <h1>Code</h1>
             <p>
-                View on the <a href="https://github.com/lupantech/ScienceQA" class="ext-link" target="blank">github
+                View on the <a href="https://github.com/Lordog/R-Judge" class="ext-link" target="blank">github
                     repository</a>.
             </p>
         </div>
