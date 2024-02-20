@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/nav.css">
     <script src="javascript/index.js" defer></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full"></script>
 </head>
 
 <body>
@@ -63,7 +64,7 @@
             <div id="example-box">
                 <figure>
                     <img class="example-img" src="assets/illustration.png" alt="rjudge.png">
-                    <figcaption style="text-align: center;">This is an illustration.</figcaption>
+                    <figcaption style="text-align: center;">Figure 1. Illustration of R-Judge by an example.</figcaption>
                 </figure>
             </div>
             <p style="line-height: 150%">
@@ -99,7 +100,13 @@
                 It incorporates human consensus on safety with annotated safety labels and high-quality risk descriptions. 
             </p>
             <div id="example-box">
-                <img class="example-img" src="assets/datasetintro.png" style="width: 80%" alt="datasetintro.png" />
+                <figure>
+                    <img class="example-img" src="assets/datasetintro.png" style="width: 80%" alt="datasetintro.png" />
+                    <figcaption style="text-align: center;">Figure 2. Dataset distribution of R-Judge.</figcaption>
+                </figure>
+            </div>
+            <div id="example-box">
+                
             </div>
             <p>
                 For more details, you can explore the datatset and check the visualizations here:
@@ -135,39 +142,38 @@
             <p>
                 As shown in the first Figure, the two evaluation recipes are conducted in a serial pipeline. 
                 First, LLMs are demonstrated with the record as input and asked to analyze whether 
-                the agent actions in the record are safe, formalized as 
-                $p_{\theta}(R) \to \textrm{analysis} \label{eq1}$. 
-                Then, LLMs are asked to output 'unsafe' or 'safe' based on record and analysis in the first step, 
-                formalized as $p_{\theta} (R, \textrm{analysis}) \to \textrm{label}\label{eq2}$.
+                the agent actions in the record are safe, formalized as:
+            </p>
+            <div class="formula">
+                <span>`p_{\theta}(R) \to analysis`</span>
+            </div>
+            <p>
+            Then, LLMs are asked to output 'unsafe' or 'safe' based on record and analysis in the first step, 
+            formalized as:
+            </p>
+            <div class="formula">
+                <span>`p_{\theta} (R, analysis) \to label`</span>
+            </div>
+            <p>
                 The output analysis in the first step and the output label 
                 in the second step are taken respectively for the two evaluation recipes, 
                 with human annotation as ground truth.
             </p>
+            <div id="example-box">
+                <img class="example-img" src="assets/illustration.png" alt="rjudge.png">
+            </div>
             <p>
-                1. Label Score for Safety Judgment. 
+                <span style="font-weight: 700;">1. Label Score for Safety Judgment. </span>
                 To evaluate the ability of LLMs to make safety judgments, 
                 a label-based test compares LLM-generated binary safety labels with truth labels 
                 from the consensus of human annotators. 
             </p>
             <p>
-            2. Pairwise Evaluation for Risk Identification.
+                <span style="font-weight: 700;">2. Pairwise Evaluation for Risk Identification. </span>
              To evaluate the effectiveness of LLMs in identifying safety risks, 
              an open-ended test utilizes GPT-4 as an automatic evaluator to assess 
              the open-ended model-generated analysis on unsafe cases. 
             </p>
-
-            <div id="example-box">
-                <img class="example-img" src="img/prompt.png" style="width: 90%" alt="prompt.png" />
-            </div>
-            <p>
-                The few-shot GPT-3 model (CoT) achieves a state-of-the-art accuracy of 75.17% on ScienceQA.
-                One prediction example is visualized bellow. We can see that GPT-3 (CoT)
-                predicts the correct answer and generates a reasonable lecture and explanation to mimic the human
-                thought process.
-            </p>
-            <div id="example-box">
-                <img class="example-img" src="img/prediction.png" style="width: 98%" alt="prediction.png" />
-            </div>
 
             <p>
                 The results of other baselines and recent work are reported at the <a
@@ -182,21 +188,14 @@
             <h1>Paper</h1>
             <p>
                 <papername>
-                    Learn to Explain: Multimodal Reasoning via Thought Chains for Science Question Answering
+                    R-Judge: Benchmarking Safety Risk Awareness for LLM Agents
                 </papername><br>
-                Pan Lu, Swaroop Mishra, Tony Xia, Liang Qiu, Kai-Wei Chang, Song-Chun Zhu, Oyvind Tafjord, Peter
-                Clark,
-                Ashwin Kalyan<br>
-                The 36th Conference on Neural Information Processing Systems (NeurIPS), 2022<br>
-                <a href="https://arxiv.org/abs/2209.09513" class="ext-link" target="blank">Paper</a> /
-                <a href="https://lupantech.github.io/papers/neurips22_scienceqa.pdf" class="ext-link"
+                Tongxin Yuan, Zhiwei He, Lingzhong Dong, Yiming Wang, Ruijie Zhao, Tian Xia, Lizhen Xu, Binglin Zhou, 
+                Fangqi Li, Zhuosheng Zhang, Rui Wang, Gongshen Liu<br>
+                <a href="https://arxiv.org/abs/2401.10019" class="ext-link" target="blank">Paper</a> /
+                <a href="https://arxiv.org/pdf/2401.10019.pdf" class="ext-link"
                     target="blank">PDF</a> /
-                <a href="https://github.com/lupantech/ScienceQA" class="ext-link" target="blank">Code</a>
-            </p>
-            <p>
-                <a href="https://lupantech.github.io/papers/neurips22_scienceqa.pdf" class="ext-link" target="blank">
-                    <img src="./img/thumbnail.png" style="width: 100%;">
-                </a>
+                <a href="https://github.com/Lordog/R-Judge" class="ext-link" target="blank">Code</a>
             </p>
         </div>
 
