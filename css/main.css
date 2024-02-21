@@ -2,9 +2,9 @@
 :root {
     --nav-font: Arial, Helvetica, sans-serif;
     --nav-height: 6vh;
-    --UCLA-gold: #FFD100;
-    --UCLA-blue: #2774AE;
-    --UCLA-darkblue: #003B5C;
+    --MY-gold: #FFC436;
+    --MY-blue: #8FAADC;
+    --MY-darkblue: #0070C0;
     --body-font: #212529;
     --heading: #1859c2;
     --nav-darkblue: #05004a;
@@ -32,7 +32,7 @@ strong {
 
 /* block: heading in the paragraph */
 h1 {
-    /* color: var(--UCLA-blue); */
+    /* color: var(--MY-blue); */
     color: var(--heading);
 }
 
@@ -127,9 +127,9 @@ li {
     left: 0vw;
     font-weight: bold;
     color: white;
-    /* background: linear-gradient(to bottom, var(--nav-darkblue), var(--UCLA-blue)); */
-    background: linear-gradient(180deg, var(--nav-darkblue), var(--UCLA-blue));
-    /* background: linear-gradient(, var(--UCLA-darkblue), var(--UCLA-blue) 60%, white); */
+    /* background: linear-gradient(to bottom, var(--nav-darkblue), var(--MY-blue)); */
+    background: linear-gradient(180deg, var(--nav-darkblue), var(--MY-blue));
+    /* background: linear-gradient(, var(--MY-darkblue), var(--MY-blue) 60%, white); */
 }
 
 #title-icon {
@@ -237,7 +237,7 @@ li {
 }
 
 .ext-link {
-    /* color: var(--UCLA-blue); */
+    /* color: var(--MY-blue); */
     color: #007bff;
     /* text-decoration: underline; */
 }
@@ -292,7 +292,7 @@ li {
     font-size: 16px;
     text-align: center;
     font-weight: 600;
-    background-color: var(--UCLA-darkblue);
+    background-color: var(--MY-darkblue);
     color: white;
 }
 

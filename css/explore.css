@@ -16,6 +16,7 @@ input[type=button] {
     margin: 0;
     padding: 0;
     margin-top: var(--nav-height);
+    margin-right: 0;
 }
 
 .optionsbtn {
@@ -93,7 +94,7 @@ input[type=button] {
 }
 
 .display-col {
-    width: 48%;
+    width: 98%;
 }
 
 .box {
@@ -120,9 +121,22 @@ input[type=button] {
     color: blue;
 }
 
-.hint-txt {
+.profile-txt {
     margin-bottom: 2px;
 }
+
+.label-txt {
+    margin-bottom: 2px;
+}
+
+.riskdesc-txt {
+    margin-bottom: 2px;
+}
+
+.record-txt{
+    margin-bottom: 2px;
+}
+
 
 .question-img {
     max-width: 100%;
@@ -182,4 +196,90 @@ input[type=button] {
 
 .button-success {
     background-color: rgb(28, 184, 65);
+}
+
+
+
+
+.sidebar {
+    /*float: top;*/
+    width: 100px;
+    padding: 0 0;
+    border: 0 0;
+    margin: 0 0;
+    /*background-color: black;*/
+}
+
+.sidebar ul {
+    list-style-type: none;
+    /*top: 20px;*/
+    padding: 0 0;
+    margin: 0;
+    background: #0070C0;/*#aaa;*/
+}
+
+.sidebar ul li {
+    margin-top: 0;
+    display: block;
+    color: white;
+    top: 0;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    position: relative;
+}
+
+/*.sidebar ul li:hover {
+    background: #cea;
+}*/
+/*
+.sidebar ul li a {
+    text-decoration: none;
+    color: #B4B4B8;
+}
+*/
+
+/*关键一：将二级菜单设置为display：none;*/
+.sidebar ul li ul {
+    position: absolute;
+    top: 0;
+    padding: 0 0;
+    float: top;
+    width: 100px;
+    left: 100px;
+    display: none;
+    background: #8FAADC;/*#aaa;*/
+}
+
+.sidebar ul li ul li {
+    float: top;
+    top: 0;
+    text-align: center;
+    padding: 0 10px;
+}
+
+/*.sidebar ul li ul li:hover {
+    background: #cea;
+}*/
+/*
+.sidebar ul li ul li a:hover {
+    color: #ff0000;
+}*/
+
+/*关键二：在划过二级菜单从属的一级菜单时，设置为display:block;*/
+.sidebar ul li:hover ul {
+    display: block;
+}
+
+.mybutton {
+    background-color: #8FAADC;
+    border: none;
+    color: white;
+    padding: 0 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    /*font-size: 16px;*/
+    margin: 0 0;
+    cursor: pointer;
 }

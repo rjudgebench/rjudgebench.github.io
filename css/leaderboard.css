@@ -58,7 +58,7 @@ table#results.js-sort-16 tbody tr td:nth-child(17) {
     font-size: 16px;
     text-align: center;
     font-weight: 600;
-    background-color: var(--UCLA-darkblue);
+    background-color: var(--MY-darkblue);
     color: white;
 }
 
