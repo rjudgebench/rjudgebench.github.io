@@ -41,68 +41,75 @@
     </div>
 
     <div class="row">
-        <div class="col" style="width: 400px;">
-            <div class="sidebar">
-                <ul>
-                    <li>Finance
-                        <ul>
-                            <li><button class="mybutton">Banking</button></li>
-                            <li><button class="mybutton">Bitcoin</button></li>
-                            <li><button class="mybutton">Webshop</button></li>
-                        </ul>
-                    </li>
-                    <li>IoT
-                        <ul>
-                            <li><button class="mybutton">Traffic</button></li>
-                            <li><button class="mybutton">House</button></li>
-                        </ul>
-                    </li>
-                    <li>Health
-                        <ul>
-                            <li><button class="mybutton">Chatbot</button></li>
-                            <li><button class="mybutton">Medical</button></li>
-                        </ul>
-                    </li>
-                    <li>OS
-                        <ul>
-                            <li><button class="mybutton">Mobile</button></li>
-                            <li><button class="mybutton">Windows</button></li>
-                        </ul>
-                    </li>
-                    <li>Program
-                        <ul>
-                            <li><button class="mybutton">Code</button></li>
-                            <li><button class="mybutton">Security</button></li>
-                            <li><button class="mybutton">Operation</button></li>
-                            <li><button class="mybutton">Terminal</button></li>
-                        </ul>
-                    </li>
-                    <li>Software
-                        <ul>
-                            <li><button class="mybutton">Mail</button></li>
-                            <li><button class="mybutton">Workflow</button></li>
-                            <li><button class="mybutton">Social</button></li>
-                        </ul>
-                    </li>
-                    <li>Web
-                        <ul>
-                            <li><button class="mybutton">Browser</button></li>
-                            <li><button class="mybutton">Search</button></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <p>1. Select <b>Category</b> for samples per scenario.</p>
-            <p>2. Field Explanation</p>
-            <p>· <b>Profile</b>: The profile for the agent of its role.</p>
-            <p>· <b>Record</b>: The record snapshots the interaction process between the user, environment, and agent. For generality, we use ReAct as the agent framework where agents think and act in interactive environments. </p>
-            <p>· <b>Label</b>: 1 for unsafe, and 0 for safe. It is labeled and cross-checked carefully by well-trained human annotators. The labeling standard is the safety consensus of annotators based on general safety standard. We ensure truth labels are clear with no ambiguity through cross-validation by human annotators. </p>
-            <p>· <b>Risk Description</b>: Carefully documented by annotators, a risk description includes complete information for humans and agents to understand the risks of the case.</p>
+        <div class="sidebar">
+            <ul>
+                <li>Finance
+                    <ul>
+                        <li><button class="mybutton">Banking</button></li>
+                        <li><button class="mybutton">Bitcoin</button></li>
+                        <li><button class="mybutton">Webshop</button></li>
+                    </ul>
+                </li>
+                <li>IoT
+                    <ul>
+                        <li><button class="mybutton">Traffic</button></li>
+                        <li><button class="mybutton">House</button></li>
+                    </ul>
+                </li>
+                <li>Health
+                    <ul>
+                        <li><button class="mybutton">Chatbot</button></li>
+                        <li><button class="mybutton">Medical</button></li>
+                    </ul>
+                </li>
+                <li>OS
+                    <ul>
+                        <li><button class="mybutton">Mobile</button></li>
+                        <li><button class="mybutton">Windows</button></li>
+                    </ul>
+                </li>
+                <li>Program
+                    <ul>
+                        <li><button class="mybutton">Code</button></li>
+                        <li><button class="mybutton">Security</button></li>
+                        <li><button class="mybutton">Operation</button></li>
+                        <li><button class="mybutton">Terminal</button></li>
+                    </ul>
+                </li>
+                <li>Software
+                    <ul>
+                        <li><button class="mybutton">Mail</button></li>
+                        <li><button class="mybutton">Workflow</button></li>
+                        <li><button class="mybutton">Social</button></li>
+                    </ul>
+                </li>
+                <li>Web
+                    <ul>
+                        <li><button class="mybutton">Browser</button></li>
+                        <li><button class="mybutton">Search</button></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-        <div id="display" style="width: 800px;">
+        <div id="display">
             <br><br>
-            <h1>R-Judge Data</h1>
-            <br><br>
+            <h1>R-Judge Data</h1><br>
+            <h2>Case Format</h2>
+            <p>1. Select <b>Category</b>(the left bar) for samples per scenario.<br>
+            2. Field Explanation<br>
+            · <b>Profile</b>: The profile for the agent of its role.<br>
+            · <b>Record</b>: The record snapshots the interaction process between the user, environment, and agent.
+                For
+                generality, we use ReAct as the agent framework where agents think and act in interactive environments.
+                <br>
+            · <b>Label</b>: 1 for unsafe, and 0 for safe. It is labeled and cross-checked carefully by well-trained
+                human
+                annotators. The labeling standard is the safety consensus of annotators based on general safety
+                standard. We
+                ensure truth labels are clear with no ambiguity through cross-validation by human annotators. <br>
+            · <b>Risk Description</b>: Carefully documented by annotators, a risk description includes complete
+                information for humans and agents to understand the risks of the case.</p>
+                <br><h2>Samples</h2>
             <div id="content-body"></div>
         </div>
     </div>

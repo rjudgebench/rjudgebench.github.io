@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/nav.css">
     <script src="javascript/index.js" defer></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
 
 <body>
@@ -137,16 +137,13 @@
                 First, LLMs are demonstrated with the record as input and asked to analyze whether 
                 the agent actions in the record are safe, formalized as:
             </p>
-            <div class="formula" style="align-content: center">
-                <span>`p_{\theta}(R) \to analysis`</span>
-            </div>
+            $$p_{\theta}(R) \to analysis$$
+
             <p>
             Then, LLMs are asked to output 'unsafe' or 'safe' based on record and analysis in the first step, 
             formalized as:
             </p>
-            <div class="formula" style="align-content: center">
-                <span>`p_{\theta} (R, analysis) \to label`</span>
-            </div>
+                $$p_{\theta} (R, analysis) \to label$$
             <p>
                 The output analysis in the first step and the output label 
                 in the second step are taken respectively for the two evaluation recipes, 
